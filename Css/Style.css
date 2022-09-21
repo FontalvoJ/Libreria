@@ -45,7 +45,6 @@ header {
 
 /* ICONO DEL MENU */
 .hamburguer {
-    /* z-index: 10; */
     position: fixed;
     top: 30px;
     right: 30px;
@@ -64,7 +63,7 @@ header {
     right: 0;
     width: 30vw;
     height: 100%;
-    background-image: linear-gradient(135deg, #4cd3c2 0%, #0a97b0 100%);
+    background-image: linear-gradient(135deg, #000000 0%, #d29e63  100%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -204,149 +203,202 @@ header {
     cursor: pointer;
 }
 
-.experts {
+.books {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.cont-expert{
+.cont-book{
     width: 30%;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.cont-expert img {
+.cont-book img {
     width: 80%;
     display: block;
     margin: 0 auto;
-}
-
-.n-expert p{
-    display: inline-block;
-    margin-top: 20px;
-    width: 100%;
-    font-weight: 3000;
 }
 
 
 /* FOOTER */
 
 footer{
-    background-color: #43d8c9;
-    padding-bottom: 0.1px;
+    background: #000000;
+    height: auto;
+    width: auto;
+    padding-top: 40px;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.footer-content{
+
+.footer-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding-top: 60p;
-    padding-bottom: 40px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-.contect-us {
-    width: 40%;
-    color: #f7f7f7;
-}
-
-.brand {
-    font-weight: 500;
-    font-size: 40px;
-}
-
-.brand+p{
-    font-weight: 500;
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
 }
 
 .social-media {
-    width: 50%;
+    list-style: none;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
 }
 
-/* CIRCULOS Y COLOR DE LOS ICONOS */
-
-/* FACEBOOK */
-.social-media-icon1 {
-    display: inline-block;
-    margin-left: 20px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #f7f7f7;
-    border-radius: 50%;
-    text-align: center;
-    color: #3b5998;
+.social-media li {
+    margin: 0 10px;
 }
 
-.social-media-icon1:hover {
-    background: #fff;
-    color: #3b5998;
+.social-media a{
+    text-decoration: none;
+    color: #fff;
 }
 
+.social-media a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
 
-.social-media-icon1 i {
-    font-size: 30px;
-    line-height: 60px;
+.social-media a:hover{
+    color: #d29e63 ;
 }
 
 
-/* INSTAGRAM */
-.social-media-icon2 {
-    display: inline-block;
-    margin-left: 20px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #f7f7f7;
-    border-radius: 50%;
-    text-align: center;
-    color: #d92027;
+.contact{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6eee4;
 }
 
-.social-media-icon2:hover {
-    background: #fff;
-    color: #d92027;
+.contact__image-wrapper{
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-media-icon2 i {
-    font-size: 30px;
-    line-height: 60px;
+.contact__image{
+    width: 100%;
 }
 
-/* TWITTER */
-.social-media-icon3 {
-    display: inline-block;
-    margin-left: 20px;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #f7f7f7;
-    border-radius: 50%;
-    text-align: center;
-    color: #00acee;
+.contact__right-side{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding:0 7.3% 0 4.7%;
+    width: 50%;
+}
+
+.contact__title{
+    font-size: 100px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.contact__form-wrapper, .contact__input-line{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact__input-line{
+    margin-bottom: 45px;
+}
+
+.contact__label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact__input{
+    height: 30px;
+    outline: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #121212;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    color: #121212;
+    background-color: transparent;
+}
+
+.contact__input--textarea{
+    height: 100px;
+    outline: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #121212;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    color: #121212;
+    resize: none;
+    background-color: transparent;
+}
+
+.contact__submit-button{
+    padding: 18px 55px;
+    background-color: #121212;
+    border-radius: 50px;
+    color: #f2f2f2;
+    font-weight: 600;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact__submit-button:hover{
+    background-color: #2e2e2e;
 }
 
 
-.social-media-icon3:hover {
-    background: #fff;
-    color: #00acee;
-}
 
 
-.social-media-icon3 i {
-    font-size: 30px;
-    line-height: 60px;
-}
 
-/* .line {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 2px;
-    background: #fff;
-    margin-bottom: 60px;
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 800px) {
@@ -379,40 +431,10 @@ footer{
         width: 45%;
     }
 
-    .cont-expert {
+    .cont-book {
         width: 80%;
     }
 
-    .footer-content {
-        justify-content: center;
-    }
-
-    .social-media-icon1{
-        margin-left: 0;
-    }
-
-    .social-media-icon2{
-        margin-left: 0;
-    }
-
-    .social-media-icon3{
-        margin-left: 0;
-    }
-
-    .social-media {
-        width: 80%;
-        justify-content: space-evenly;
-    }
-
-    .social-media i {
-        margin-left: 0;
-    }
-
-    .contect-us {
-        text-align: center;
-        width: 80%;
-        margin-bottom: 40px;
-    }
 }
 
 @media screen  and (max-width: 500px) {
@@ -442,12 +464,5 @@ footer{
         width: 95%;
     }
 
-    .social-media {
-        width: 100%;
-    }
-
-    .contect-us{
-        width: 90%;
-    }
 
 }
