@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D7CCC8;
+}
+
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.container .form {
+    padding: 30px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #3E2723;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    margin-top: 30px;
+    position: relative;
+    background-color: #D7CCC8;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+
+.input-field i {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+}
+
+/*Aparece la linea de color en el campo cuando pasa el cursor*/
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #424242;
+}
+
+
+.form .button{
+    margin-top: 35px;  
+}
+
+.form .button input{
+    border: none;
+    background-color: #D7CCC8;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-style: 500;
+    cursor: pointer;
+}
