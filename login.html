@@ -11,24 +11,62 @@
     <link rel="stylesheet" href="/Css/login.css">
 
     <!-- ICONOS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
 
     <div class="container">
-        <div class="form">
-            <div class="form-login">
+        <div class="forms">
+            <div class="form login">
                 <span class="title"> Login </span>
                 <form action="#" method="post">
                     <div class="input-field">
                         <input type="email" name="email" id="email" placeholder="Ingrese el correo" required>
-                        <i class='bx bx-envelope icon'></i>
+                        <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese la contraseña" required>
-                        <i class='bx bx-lock-alt icon'></i>
-                        <i class='bx bx-low-vision showHidePw' ></i>
+                        <input type="password" name="contrasena" id="contrasena" class="contrasena" placeholder="Ingrese la contraseña" required>
+                        <i class="uil uil-padlock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw" ></i>
+                        
+                    </div>
+
+                    <div class="input-field button">
+                       <a href="/Index.html"><input type="button" value="Iniciar Sesion" ></a>
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text"> No estas registrado? 
+                        <a href="#" class="text signup-link"> Registrate we :3 </a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Registro-->
+            <div class="form signup">
+                <span class="title"> Registro </span>
+                <form action="#" method="post">
+                    <div class="input-field">
+                        <input type="nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                        <i class="uil uil-user-square icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="cedula" name="cedula" id="cedula" placeholder="Ingrese su cedula" required>
+                        <i class="uil uil-credit-card icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="telefono" name="telefono" id="telefono" placeholder="Ingrese su telefono" required>
+                        <i class="uil uil-phone icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" placeholder="Ingrese el correo" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="contrasena" id="contrasena" class="contrasena" placeholder="Ingrese la contraseña" required>
+                        <i class="uil uil-padlock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw" ></i>
                     </div>
 
                     <div class="input-field button">
@@ -36,13 +74,15 @@
                     </div>
                 </form>
                 <div class="login-signup">
-                    <span class="text"> No estas registrado? 
-                        <a href="registro.html" class="text signup-text"> Registrate we :3 </a>
+                    <span class="text"> Ya estas registrado? 
+                        <a href="#" class="text login-link"> Inicia sesión we :3 </a>
                     </span>
                 </div>
             </div>
         </div>
     </div>
+
+  <script src="/Js/login.js"></script>
 </body>
 
 </html>

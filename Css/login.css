@@ -23,10 +23,43 @@ body {
     background: #FFFFFF;
     box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .forms {
+    width: 200%;
+    align-items: center;
+    height: 440px;
+    display: flex;
+    transition: height 0.2s ease ;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacoty 0.09s ease;
+}
+
+.container.active .signup {
+   opacity: 1;
+   transition: opacity 0.02s ease;
+}
+
+
+.container.active .forms {
+    height: 600px;
 }
 
 .container .form {
+    width: 50%;
     padding: 30px;
+    background-color: #FFFFFF;
+    transition: margin-left 0.18s ease;
 }
 
 .container .form .title {
@@ -71,7 +104,7 @@ body {
 
 .input-field i {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     transform: translateY(-50%);
     color: #999;
     font-size: 23px;
@@ -84,6 +117,8 @@ body {
 
 .input-field i.showHidePw {
     right: 0;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /*Aparece la linea de color en el campo cuando pasa el cursor*/
@@ -92,11 +127,11 @@ body {
 }
 
 
-.form .button{
-    margin-top: 35px;  
+.form .button {
+    margin-top: 35px;
 }
 
-.form .button input{
+.form .button input {
     border: none;
     background-color: #D7CCC8;
     letter-spacing: 1px;
@@ -104,4 +139,15 @@ body {
     font-size: 17px;
     font-style: 500;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #8D6E63;
+}
+
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
 }
