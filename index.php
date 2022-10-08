@@ -1,6 +1,19 @@
+
+<?php
+        include_once('conexion_PDO.php');
+        //Consulta sql traer datos
+        $consulta = 'SELECT * FROM tbl_form';
+        $sql_query = $conn->prepare($consulta);
+        $sql_query -> execute();
+        //Arreglo para iterar un array
+        $convert_fetch = $sql_query->fetchAll();
+        //Mostrar array con la consulta 
+        //var_dump($convert_fetch);
+        //Consulta para insertar datos
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +43,10 @@
             <a href="#nuestrabiblioteca">Nuestra Biblioteca</a>
             <a href="#librosnuevos"> Libros Nuevos </a>
             <a href="#contacto">Contacto</a>
+             <!-- <a href="">Contacto</a>-->
+
+
+            
         </nav>
         <div class="contenedor head">
             <h1 class="titulo">THE GOLDEN BOOK</h1>
@@ -140,22 +157,23 @@
         </div>
         <div class="contact__right-side">
             <h1 class="contact__title"> Contacto</h1>
-            <form class="contact__form-wrapper">
+            <form class="contact__form-wrapper"  action='formulario_contacto.php' method='POST'>  <!-- action='./controladores/formulario_contacto.php' -->
                 <div class="contact__input-line">
                     <label class="contact__label"> Nombre </label>
-                    <input type="text" name="nombre" id="nombre" class="contact__input">
-                </div>
-                <div class="contact__input-line">
-                    <label class="contact__label">Email</label>
-                    <input type="email" name="email" id="email" class="contact__input">
+                    <input type="text" name="name_user" id="nombre" class="contact__input">
                 </div>
                 <div class="contact__input-line">
                     <label class="contact__label">Telefono</label>
-                    <input type="numbre" name="telefono" id="telefono" class="contact__input">
+                    <input type="number" name="phone_user" id="telefono" class="contact__input">
                 </div>
                 <div class="contact__input-line">
-                    <label  class="contact__label">Mensaje</label>
-                    <textarea type="text" name="mensaje" id="mensaje" class="contact__input--textarea"></textarea>
+                    <label class="contact__label">Email</label>
+                    <input type="email" name="email_user" id="email" class="contact__input">
+                </div>
+
+                <div class="contact__input-line">
+                    <label  class="contact__label"> Información </label>
+                    <textarea type="text" name="informacion_user" id="informacion class="contact__input--textarea"></textarea>
                 </div>
                 <input type="submit" value="Enviar" class="contact__submit-button">
                 
