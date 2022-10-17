@@ -1,15 +1,16 @@
 
 <?php
-        include_once('conexion_PDO.php');
-        //Consulta sql traer datos
-        $consulta = 'SELECT * FROM tbl_form';
-        $sql_query = $conn->prepare($consulta);
-        $sql_query -> execute();
-        //Arreglo para iterar un array
-        $convert_fetch = $sql_query->fetchAll();
-        //Mostrar array con la consulta 
-        //var_dump($convert_fetch);
-        //Consulta para insertar datos
+     include_once('conexion_PDO.php');
+     //Consulta sql traer datos
+       $consulta = 'SELECT * FROM tbl_form';
+       $sql_query = $conn->prepare($consulta);
+       $sql_query -> execute();
+       //Arreglo para iterar un array
+       $convert_fetch = $sql_query->fetchAll();
+       //Mostrar array con la consulta
+       //var_dump($convert_fetch);
+     //Consulta para insertar datos
+     
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="Css/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
 
     <!-- ICONOS -->
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -180,7 +184,31 @@
             </form>
         </div>
     </section>
+
     
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+    <th scope="col"> Nombre </th>
+    <th scope="col"> Telefono</th>
+    <th scope="col"> Correo </th>
+    <th scope="col"> Información </th>
+    <th scope="col"> Acción </th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($convert_fetch as $datos) { ?>
+        <tr>
+            <td><?php echo $datos['nombre_user']?></td>
+            <td><?php echo $datos['telefono_user']?></td>
+            <td><?php echo $datos['email_user']?></td>
+            <td><?php echo $datos['informacion_user']?></td>
+            <td><a href="eliminar.php?id=<?php echo $datos['id_users']?>">Eliminar</a> <br> <a href="editar.php?id=<?php echo $datos['id_users']?>">Editar</a>
+        </tr>
+    <?php } ?>
+    </tbody>
+    </table>
+
     <footer id="contacto">
       <div class = "footer-content">
         <h3> THE GOLDEN BOOK </h3>
