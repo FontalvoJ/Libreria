@@ -1,4 +1,3 @@
-
 <?php
      include_once('conexion_PDO.php');
      //Consulta sql traer datos
@@ -15,6 +14,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +25,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="Css/Style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 
 
     <!-- ICONOS -->
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
     <title> Libreria </title>
@@ -47,17 +48,17 @@
             <a href="#nuestrabiblioteca">Nuestra Biblioteca</a>
             <a href="#librosnuevos"> Libros Nuevos </a>
             <a href="#contacto">Contacto</a>
-             <!-- <a href="">Contacto</a>-->
+            <!-- <a href="">Contacto</a>-->
 
 
-            
+
         </nav>
         <div class="contenedor head">
             <h1 class="titulo">THE GOLDEN BOOK</h1>
-            <p class="copy"> De los diversos instrumentos del hombre, el más asombroso es, sin duda, el libro. 
-                Los demás son extensiones de su cuerpo. El microscopio, el telescopio, son extensiones 
-                de su vista; el teléfono es extensión de la voz; luego tenemos el arado y la espada, 
-                extensiones de su brazo. Pero el libro es otra cosa: el libro es una extensión de la 
+            <p class="copy"> De los diversos instrumentos del hombre, el más asombroso es, sin duda, el libro.
+                Los demás son extensiones de su cuerpo. El microscopio, el telescopio, son extensiones
+                de su vista; el teléfono es extensión de la voz; luego tenemos el arado y la espada,
+                extensiones de su brazo. Pero el libro es otra cosa: el libro es una extensión de la
                 memoria y de la imaginación.</p>
         </div>
     </header>
@@ -73,19 +74,19 @@
                 <div class="checklist-servicio">
                     <div class="service">
                         <h3 class="n-service"><span class="number">1</span> Servicio de información </h3>
-                        <p>Atención personalizada, información, asesoramiento general y local, 
+                        <p>Atención personalizada, información, asesoramiento general y local,
                             bases de datos en línea y catálogos de otras bibliotecas. </p>
                     </div>
                     <div class="service">
                         <h3 class="n-service"><span class="number">2</span>Servicio de préstamo</h3>
-                        <p>Préstamo gratuito de documentos, préstamo interbibliotecario, 
+                        <p>Préstamo gratuito de documentos, préstamo interbibliotecario,
                             préstamo especial para entidades y buzón 24 horas de devolución de documentos. </p>
                     </div>
                     <div class="service">
                         <h3 class="n-service"><span class="number">3</span> Formación </h3>
-                        <p>Visitas guiadas para niños y adultos, sesiones formativas sobre el uso y 
-                            los recursos de la Biblioteca, especialmente en los centros de enseñanza, 
-                            formación en tecnologías de la información y la comunicación, 
+                        <p>Visitas guiadas para niños y adultos, sesiones formativas sobre el uso y
+                            los recursos de la Biblioteca, especialmente en los centros de enseñanza,
+                            formación en tecnologías de la información y la comunicación,
                             apoyo al autoaprendizaje, apoyo a la enseñanza reglada.
                         </p>
                     </div>
@@ -112,13 +113,13 @@
             </div>
         </section>
 
-     
-   <!-- EFECTO DE LA IMAGEN -->
 
-   <section class="imagen-light">
-    <img src="Img/close.svg" class="close">
-    <img src="Img/home-img.jpg" class="agregar-imagen">
-</section>
+        <!-- EFECTO DE LA IMAGEN -->
+
+        <section class="imagen-light">
+            <img src="Img/close.svg" class="close">
+            <img src="Img/home-img.jpg" class="agregar-imagen">
+        </section>
 
         <!-- EXPERTOS -->
         <section class="contenedor" id="librosnuevos">
@@ -161,7 +162,8 @@
         </div>
         <div class="contact__right-side">
             <h1 class="contact__title"> Contacto</h1>
-            <form class="contact__form-wrapper"  action='formulario_contacto.php' method='POST'>  <!-- action='./controladores/formulario_contacto.php' -->
+            <form class="contact__form-wrapper" action='formulario_contacto.php' method='POST'>
+                <!-- action='./controladores/formulario_contacto.php' -->
                 <div class="contact__input-line">
                     <label class="contact__label"> Nombre </label>
                     <input type="text" name="name_user" id="nombre" class="contact__input">
@@ -176,53 +178,63 @@
                 </div>
 
                 <div class="contact__input-line">
-                    <label  class="contact__label"> Información </label>
-                    <textarea type="text" name="informacion_user" id="informacion class="contact__input--textarea"></textarea>
+                    <label class="contact__label"> Información </label>
+                    <input type="text" name="informacion_user" id="informacion class="
+                        contact__input--textarea"></input>
                 </div>
                 <input type="submit" value="Enviar" class="contact__submit-button">
-                
+
             </form>
         </div>
     </section>
 
-    
+
     <table class="table">
-  <thead class="thead-dark">
-    <tr>
-    <th scope="col"> Nombre </th>
-    <th scope="col"> Telefono</th>
-    <th scope="col"> Correo </th>
-    <th scope="col"> Información </th>
-    <th scope="col"> Acción </th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach($convert_fetch as $datos) { ?>
-        <tr>
-            <td><?php echo $datos['nombre_user']?></td>
-            <td><?php echo $datos['telefono_user']?></td>
-            <td><?php echo $datos['email_user']?></td>
-            <td><?php echo $datos['informacion_user']?></td>
-            <td><a href="eliminar.php?id=<?php echo $datos['id_users']?>">Eliminar</a> <br> <a href="editar.php?id=<?php echo $datos['id_users']?>">Editar</a>
-        </tr>
-    <?php } ?>
-    </tbody>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"> Nombre </th>
+                <th scope="col"> Telefono</th>
+                <th scope="col"> Correo </th>
+                <th scope="col"> Información </th>
+                <th scope="col"> Acción </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($convert_fetch as $datos) { ?>
+            <tr>
+                <td>
+                    <?php echo $datos['nombre_user']?>
+                </td>
+                <td>
+                    <?php echo $datos['telefono_user']?>
+                </td>
+                <td>
+                    <?php echo $datos['email_user']?>
+                </td>
+                <td>
+                    <?php echo $datos['informacion_user']?>
+                </td>
+                <td><a href="eliminar.php?id=<?php echo $datos['id_users']?>" class="btn btn-danger" >Eliminar</a> 
+                    <a href="editar.php?id=<?php echo $datos['id_users']?>"  class="btn btn-warning">Editar</a>
+            </tr>
+            <?php } ?>
+        </tbody>
     </table>
 
     <footer id="contacto">
-      <div class = "footer-content">
-        <h3> THE GOLDEN BOOK </h3>
-        <ul class="social-media">
-            <li><a href="#"><i class='bx bxl-facebook-circle' ></i></a></li>
-            <li><a href="#"><i class='bx bxl-linkedin-square' ></i></a></li>
-            <li><a href="#"><i class='bx bxl-instagram-alt' ></i></a></li>
-            <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-            <li><a href="#"><i class='bx bxl-gmail'></i></a></li>
-        </ul>
-      </div>
+        <div class="footer-content">
+            <h3> THE GOLDEN BOOK </h3>
+            <ul class="social-media">
+                <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="#"><i class='bx bxl-linkedin-square'></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+                <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#"><i class='bx bxl-gmail'></i></a></li>
+            </ul>
+        </div>
 
-      
+
     </footer>
 
     <script src="Js/menu.js"></script>

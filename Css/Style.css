@@ -13,13 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.contenedor {
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden; /* TODO LO QUE SALGA SE OCULTA */
-    margin: auto;   /* CENTRA TODO */
-    padding: 60px 0;
-}
+
 
 /* IMAGEN INICIAL */
 header {
