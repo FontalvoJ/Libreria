@@ -1,13 +1,13 @@
 <?php
 include_once("conexion_PDO.php");
 if (isset($_POST)){
-    $id = $_POST['id'];
+    $id = $_GET['id'];
     $query = 'SELECT * FROM tbl_form WHERE id_users = ?';
     $query_prepare = $conn->prepare($query);
     $query_prepare -> execute(array($id)); 
     $seacher = $query_prepare->fetchAll();
      //Mostrar array con la consulta
-   }elseif (isset($_POST)){
+   }else (isset($_POST)){
     $id = $_POST['id'];
     $nombre = $_POST['name_user'];
     $telefono = $_POST ['phone_user'];
@@ -18,11 +18,9 @@ if (isset($_POST)){
     WHERE id_users=?';
 
     $update_prepare = $conn->prepare($update_query);
-    $update_prepare -> execute(array($id,$nombre,$telefono,$correo,$informacion));      
+    $update_prepare -> execute(array($nombre,$telefono,$correo,$informacion));      
 
     header('Location: index.php');
-  } else {
-    
   }
 ?>
 
