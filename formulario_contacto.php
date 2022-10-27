@@ -11,6 +11,7 @@
     $insert_prepare = $conn->prepare($insert_query);
     $insert_prepare -> execute(array($nombre,$telefono,$correo,$informacion));      
     echo "<script>alert('Datos Guardados');</script>";
+    header('Location:index.php');
     }else {
     echo "Error al ingresar los datos";
     }

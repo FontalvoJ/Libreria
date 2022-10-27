@@ -1,27 +1,24 @@
 <?php
-include_once("conexion_PDO.php");
-if (isset($_POST)){
-    $id = $_GET['id'];
-    $query = 'SELECT * FROM tbl_form WHERE id_users = ?';
-    $query_prepare = $conn->prepare($query);
-    $query_prepare -> execute(array($id)); 
-    $seacher = $query_prepare->fetchAll();
+     include_once("conexion_PDO.php");
+     if (isset($_GET)){
+     $id = $_GET['id'];
+     $query = 'SELECT * FROM tbl_form WHERE id_users = ?';
+     $query_prepare = $conn->prepare($query);
+     $query_prepare -> execute(array($id)); 
+     $seacher = $query_prepare->fetchAll();
      //Mostrar array con la consulta
-   }else (isset($_POST)){
-    $id = $_POST['id'];
-    $nombre = $_POST['name_user'];
-    $telefono = $_POST ['phone_user'];
-    $correo = $_POST ['email_user'];
-    $informacion = $_POST ['informacion_user'];
-    
-    $update_query = 'UPDATE tbl_form  SET nombre_user=?,telefono_user=?,email_user=?,informacion_user=?  
-    WHERE id_users=?';
-
-    $update_prepare = $conn->prepare($update_query);
-    $update_prepare -> execute(array($nombre,$telefono,$correo,$informacion));      
-
-    header('Location: index.php');
-  }
+     
+   }
+   
+?>
+<?php
+    include_once("conexion_PDO.php"); 
+    if (isset($_GET)) {
+        $id = $_GET['id'];
+        echo $_REQUEST['nombre_user'];
+        $nombre = $_GET['nombre_user'];
+        echo "nombre_user",$nombre;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -52,13 +49,12 @@ if (isset($_POST)){
         </div>
         <div class="contact__right-side">
             <h1 class="contact__title"> Contacto</h1>
-            <form class="contact__form-wrapper" action="editar.php?id=<?php echo $datos['id_users']?>" method="POST">
+            <form class="contact__form-wrapper" action="editar.php?id=<?php echo $datos['id_users']?>" method="GET">
                 <!-- action='./controladores/formulario_contacto.php' -->
                 <?php foreach($seacher as $datos_update) { ?>
                 <div class="contact__input-line">
                     <label class="contact__label"> Nombre </label>
-                    <input type="text" name="name_user" id="nombre" class="contact__input" value=<?php echo
-                        $datos_update['nombre_user']?>>
+                    <input type="text" name="name_user" id="nombre" class="contact__input" value="<?php echo $datos_update[0]['name_user']?>
                 </div>
                 <div class="contact__input-line">
                     <label class="contact__label">Telefono</label>

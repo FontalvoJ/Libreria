@@ -48,7 +48,10 @@
             <a href="#nuestrabiblioteca">Nuestra Biblioteca</a>
             <a href="#librosnuevos"> Libros Nuevos </a>
             <a href="#contacto">Contacto</a>
-            <!-- <a href="">Contacto</a>-->
+            <a href="formulario_sesion.php">Inicio de Sesión</a>
+            <a href="listar_contacto.php">Listar Contacto</a>
+            <a href="listar_usuarios.php">Listar Usuarios</a>
+            
 
 
 
@@ -189,37 +192,6 @@
     </section>
 
 
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col"> Nombre </th>
-                <th scope="col"> Telefono</th>
-                <th scope="col"> Correo </th>
-                <th scope="col"> Información </th>
-                <th scope="col"> Acción </th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($convert_fetch as $datos) { ?>
-            <tr>
-                <td>
-                    <?php echo $datos['nombre_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['telefono_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['email_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['informacion_user']?>
-                </td>
-                <td><a href="eliminar.php?id=<?php echo $datos['id_users']?>" class="btn btn-danger" >Eliminar</a> 
-                    <a href="editar.php?id=<?php echo $datos['id_users']?>"  class="btn btn-warning">Editar</a>
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
 
     <footer id="contacto">
         <div class="footer-content">
