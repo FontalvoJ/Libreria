@@ -36,37 +36,41 @@ $convert_fetch = $sql_query->fetchAll();
             </div>
             <div class="col-lg-8 col-md-10 ml-auto mr-auto">
                 <div class="table-responsive">
-                <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col"> Nombre </th>
-                <th scope="col"> Telefono</th>
-                <th scope="col"> Correo </th>
-                <th scope="col"> Información </th>
-                <th scope="col"> Acciones </th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($convert_fetch as $datos) { ?>
-            <tr>
-                <td>
-                    <?php echo $datos['nombre_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['telefono_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['email_user']?>
-                </td>
-                <td>
-                    <?php echo $datos['informacion_user']?>
-                </td>
-                <td><a href="eliminar.php?id=<?php echo $datos['id_users']?>" class="btn btn-danger" >Eliminar</a> 
-                    <a href="editar.php?id=<?php echo $datos['id_users']?>"  class="btn btn-warning">Editar</a>
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col"> Id </th>
+                                <th scope="col"> Nombre </th>
+                                <th scope="col"> Telefono</th>
+                                <th scope="col"> Correo </th>
+                                <th scope="col"> Información </th>
+                                <th scope="col"> Acciones </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($convert_fetch as $datos) { ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $datos['id_users'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $datos['nombre_user'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $datos['telefono_user'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $datos['email_user'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $datos['informacion_user'] ?>
+                                    </td>
+                                    <td><a href="eliminar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-danger">Eliminar</a>
+                                        <a href="editar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning">Editar</a>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
 
 

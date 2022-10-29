@@ -1,25 +1,3 @@
-<?php
-     include_once("conexion_PDO.php");
-     if (isset($_GET)){
-     $id = $_GET['id'];
-     $query = 'SELECT * FROM tbl_form WHERE id_users = ?';
-     $query_prepare = $conn->prepare($query);
-     $query_prepare -> execute(array($id)); 
-     $seacher = $query_prepare->fetchAll();
-     //Mostrar array con la consulta
-     
-   }
-   
-?>
-<?php
-    include_once("conexion_PDO.php"); 
-    if (isset($_GET)) {
-        $id = $_GET['id'];
-        echo $_REQUEST['nombre_user'];
-        $nombre = $_GET['nombre_user'];
-        echo "nombre_user",$nombre;
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
