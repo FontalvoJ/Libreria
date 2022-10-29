@@ -7,10 +7,10 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Css/table.css">
 </head>
 <?php
 include_once('conexion_PDO.php');
@@ -27,62 +27,74 @@ $convert_fetch = $sql_query->fetchAll();
 ?>
 
 <body>
-    <div class="container">
-        <div class="title">
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Tabla de Contacto</h3>
-            </div>
-            <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col"> Id </th>
-                                <th scope="col"> Nombre </th>
-                                <th scope="col"> Telefono</th>
-                                <th scope="col"> Correo </th>
-                                <th scope="col"> Información </th>
-                                <th scope="col"> Acciones </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($convert_fetch as $datos) { ?>
-                                <tr>
-                                    <td>
-                                        <?php echo $datos['id_users'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $datos['nombre_user'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $datos['telefono_user'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $datos['email_user'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $datos['informacion_user'] ?>
-                                    </td>
-                                    <td><a href="eliminar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-danger">Eliminar</a>
-                                        <a href="editar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning">Editar</a>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+<nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+  <div class="container">
+    
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2 active" aria-current="page" href="index.php">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="listar_usuarios.php">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="listar_contacto.php">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
 
-                <footer class="footer text-center ">
-                    <p>Diseñado por José David Fontalvo Mejía</p>
-                </footer>
-
-
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-                <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-
+                <div class="col-lg-8 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Contact Table</h4>
+                            <p class="card-description">
+                                The contacts register are:
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"> Id </th>
+                                            <th scope="col"> Name </th>
+                                            <th scope="col"> Phone</th>
+                                            <th scope="col"> Email </th>
+                                            <th scope="col"> Info</th>
+                                            <th scope="col"> Delete </th>
+                                            <th scope="col"> Edit </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($convert_fetch as $datos) { ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $datos['id_users'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $datos['nombre_user'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $datos['telefono_user'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $datos['email_user'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $datos['informacion_user'] ?>
+                                                </td>
+                                                <td><a href="eliminar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-danger"><i class='bx bxs-user-x'></i></a>
+                                                <td> <a href="editar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning"><i class='bx bx-pencil'></i></a></td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
 </body>
 
 </html>
