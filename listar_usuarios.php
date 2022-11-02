@@ -85,8 +85,9 @@ $convert_fetch = $sql_query->fetchAll();
                                                 <td>
                                                     <?php echo $datos['email_user'] ?>
                                                 </td>
+                                                
                                                 <td><a href="eliminar_usuarios.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-danger"><i class='bx bxs-user-x'></i></a>
-                                                <td> <a href="editar_usuarios.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning"><i class='bx bx-pencil'></i></a></td>
+                                                <td> <a href="form-edit-user.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning"><i class='bx bx-pencil'></i></a></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>

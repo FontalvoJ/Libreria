@@ -67,7 +67,6 @@ $convert_fetch = $sql_query->fetchAll();
                                             <th scope="col"> Email </th>
                                             <th scope="col"> Info</th>
                                             <th scope="col"> Delete </th>
-                                            <th scope="col"> Edit </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -89,7 +88,7 @@ $convert_fetch = $sql_query->fetchAll();
                                                     <?php echo $datos['informacion_user'] ?>
                                                 </td>
                                                 <td><a href="eliminar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-danger"><i class='bx bxs-user-x'></i></a>
-                                                <td> <a href="editar_contacto.php?id=<?php echo $datos['id_users'] ?>" class="btn btn-warning"><i class='bx bx-pencil'></i></a></td>
+                                                
                                             </tr>
                                         <?php } ?>
                                     </tbody>

@@ -38,9 +38,7 @@
 </head>
 
 <body>
-    <!-- <div class="contenedor"> -->
-
-    <header class="header" id="inicio">
+ 
         <img src="Img/hamburguesa.svg" alt="" class="hamburguer">
         <nav class="menu-navegacion">
             <a href="#inicio">Inicio</a>
