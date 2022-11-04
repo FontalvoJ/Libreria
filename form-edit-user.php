@@ -71,7 +71,7 @@ if (isset($_GET)) {
                                                 <input type="email" id="form2Example17" class="form-control form-control-lg" name="correo" value="<?php echo $datos_update['email_user'] ?>" />
                                                 <label class="form-label" for="form2Example17" required autofocus>Correo</label>
                                             </div>
-                                            <div class="pt-1 mb-4"> <button type="submit" class="btn btn-dark btn-lg btn-block">Actualizar</button> </div>
+                                            <div class="pt-1 mb-4"><input type="hidden" name="id" value="<?php echo $datos_update['id_users'] ?>"> <button type="submit" class="btn btn-dark btn-lg btn-block">Actualizar</button> </div>
                                         <?php } ?>
                                     </form>
                                 </div>
